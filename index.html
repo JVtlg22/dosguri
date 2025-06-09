@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos Guri</title>
+    <!-- Integração do TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Descrição concisa da sua empresa e serviços.">
+    
+    <style>
+        /* Estilos personalizados podem ser adicionados aqui se necessário */
+        /* Exemplo: Animação suave para o botão de navegação */
+        #mobile-menu-button {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Cabeçalho -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo/Nome da Empresa -->
+            <a href="#" class="text-xl font-bold text-blue-600">Dos Guri</a>
+
+            <!-- Navegação Principal (Desktop) -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#hero" class="hover:text-blue-500">Início</a></li>
+                <li><a href="#sobre" class="hover:text-blue-500">Sobre Nós</a></li>
+                <li><a href="#recursos" class="hover:text-blue-500">Recursos</a></li>
+                <li><a href="#depoimentos" class="hover:text-blue-500">Depoimentos</a></li>
+                <li><a href="#CTA" class="hover:text-blue-500">Contato</a></li>
+            </ul>
+
+            <!-- Botão de Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile (Oculto por padrão) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 transform -translate-y-full">
+            <ul class="flex flex-col items-center py-4 space-y-2">
+                <li><a href="#hero" class="block px-4 py-2 hover:bg-gray-100 w-full text-center">Início</a></li>
+                <li><a href="#sobre" class="block px-4 py-2 hover:bg-gray-100 w-full text-center">Sobre Nós</a></li>
+                <li><a href="#recursos" class="block px-4 py-2 hover:bg-gray-100 w-full text-center">Recursos</a></li>
+                <li><a href="#depoimentos" class="block px-4 py-2 hover:bg-gray-100 w-full text-center">Depoimentos</a></li>
+                <li><a href="#CTA" class="block px-4 py-2 hover:bg-gray-100 w-full text-center">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section id="hero" class="bg-blue-600 text-white text-center py-20 px-4 flex flex-col items-center justify-center min-h-[60vh]">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Empresa Líder do Brasil, do Mundo e do Universo</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl">Entregamos soluções inovadoras que transformam o seu negócio e impulsionam o seu sucesso além das estrelas.</p>
+            <a href="#CTA" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg">Descubra Nossas Soluções</a>
+            <!-- Placeholder para imagem forte -->
+            
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-16 px-4 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Nossa História e Missão</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">Fundada em 2010 com a visão de revolucionar o mercado através da tecnologia, a Empresa Inc. rapidamente se tornou uma referência em soluções digitais inovadoras. Somos especialistas em desenvolvimento de software sob medida, consultoria estratégica de TI e implementação de inteligência artificial para otimização de processos. Nossa equipe é composta por profissionais altamente qualificados e apaixonados por desafios, dedicados a transformar ideias complexas em resultados tangíveis e impactantes para nossos clientes.</p>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">Nossa missão é empoderar negócios de todos os portes com ferramentas tecnológicas de ponta, impulsionando o crescimento sustentável e a competitividade no cenário global. Acreditamos que a inovação é a chave para o futuro e trabalhamos incansavelmente para entregar não apenas software, mas soluções completas que agregam valor real e duradouro.</p>
+            </div>
+        </section>
+
+        <!-- Seção Recursos/Vantagens -->
+        <section id="recursos" class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Diferenciais Competitivos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Tecnologia de Ponta</h3>
+                        <p class="text-gray-600">Utilizamos as mais recentes inovações em IA, cloud computing e desenvolvimento ágil para criar soluções robustas, escaláveis e preparadas para o futuro.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Suporte Humanizado 24/7</h3>
+                        <p class="text-gray-600">Nossa equipe de especialistas está disponível a qualquer hora para oferecer suporte técnico e estratégico, garantindo a continuidade e o sucesso do seu negócio.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Foco em Resultados Reais</h3>
+                        <p class="text-gray-600">Não entregamos apenas código, entregamos valor. Nossas soluções são projetadas para otimizar processos, aumentar a eficiência e gerar crescimento mensurável.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section id="depoimentos" class="py-16 px-4 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12 text-gray-800">Histórias de Sucesso de Nossos Clientes</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <blockquote class="bg-gray-100 p-8 rounded-lg shadow-inner flex flex-col items-center">
+                        
+                        <p class="text-lg italic text-gray-700 mb-4">"A parceria com a Empresa Inc. transformou nossa operação logística. A implementação do sistema de IA otimizou nossas rotas e reduziu custos em 25% no primeiro trimestre. O suporte foi excepcional!"</p>
+                        <footer class="text-center text-gray-600 font-medium mt-auto">- Maria Silva, Diretora de Operações, LogiMax Transportes</footer>
+                    </blockquote>
+                    <blockquote class="bg-gray-100 p-8 rounded-lg shadow-inner flex flex-col items-center">
+                        
+                        <p class="text-lg italic text-gray-700 mb-4">"Estávamos céticos sobre a migração para a nuvem, mas a equipe da Empresa Inc. conduziu o processo de forma impecável. Ganhamos escalabilidade, segurança e agilidade. Recomendo fortemente!"</p>
+                        <footer class="text-center text-gray-600 font-medium mt-auto">- João Pereira, CEO, TechInova Soluções</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CTA (Call to Action) -->
+        <section id="CTA" class="py-20 px-4 bg-blue-600 text-white text-center">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Levar Seu Negócio ao Próximo Nível?</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Não perca tempo! Entre em contato conosco hoje mesmo e descubra como podemos ajudar você a alcançar o sucesso.</p>
+                <a href="#contato" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-10 rounded-full transition duration-300 text-lg inline-block">Fale Conosco Agora!</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+   <!-- Formulário de Contato Melhorado -->
+<section id="contato-form" class="bg-gray-100 py-20 px-4">
+  <div class="max-w-lg mx-auto bg-white rounded-xl shadow-lg p-10">
+    <h4 class="text-3xl font-semibold mb-8 text-center text-gray-800">Fale Conosco Aki</h4>
+    <form id="contact-form" class="space-y-6" novalidate>
+      <div>
+        <label for="name" class="block text-gray-700 mb-2 font-medium">Nome</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Seu nome completo"
+          class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-300 transition outline-none text-gray-900"
+        />
+        <p class="mt-1 text-sm text-red-600 hidden">Por favor, insira seu nome.</p>
+      </div>
+      <div>
+        <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="seuemail@exemplo.com"
+          class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-300 transition outline-none text-gray-900"
+        />
+        <p class="mt-1 text-sm text-red-600 hidden">Por favor, insira um email válido.</p>
+      </div>
+      <div>
+        <label for="message" class="block text-gray-700 mb-2 font-medium">Mensagem</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Escreva sua mensagem aqui..."
+          class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-300 transition outline-none text-gray-900 resize-none"
+        ></textarea>
+        <p class="mt-1 text-sm text-red-600 hidden">A mensagem não pode ficar vazia.</p>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400"
+      >
+        Enviar Mensagem
+      </button>
+      <p id="form-feedback" class="mt-4 text-center text-green-600 hidden">Mensagem enviada com sucesso! Obrigado pelo contato.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Validação simples e feedback
+  const form = document.getElementById('contact-form');
+  const feedback = document.getElementById('form-feedback');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    // Nome
+    const nameInput = form.name;
+    const nameError = nameInput.nextElementSibling;
+    if (!nameInput.value.trim()) {
+      nameError.classList.remove('hidden');
+      valid = false;
+    } else {
+      nameError.classList.add('hidden');
+    }
+
+    // Email
+    const emailInput = form.email;
+    const emailError = emailInput.nextElementSibling;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      emailError.classList.remove('hidden');
+      valid = false;
+    } else {
+      emailError.classList.add('hidden');
+    }
+
+    // Mensagem
+    const messageInput = form.message;
+    const messageError = messageInput.nextElementSibling;
+    if (!messageInput.value.trim()) {
+      messageError.classList.remove('hidden');
+      valid = false;
+    } else {
+      messageError.classList.add('hidden');
+    }
+
+    if (valid) {
+      // Aqui você pode enviar os dados para backend ou API
+      // Por ora só exibir feedback
+      feedback.classList.remove('hidden');
+      form.reset();
+
+      // Esconde feedback após 5s
+      setTimeout(() => feedback.classList.add('hidden'), 5000);
+    } else {
+      feedback.classList.add('hidden');
+    }
+  });
+</script>
+    
+    <footer id="contato" class="bg-gray-800 text-gray-300 py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contato e Links Rápidos -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-white">Nossa Localização</h4>
+                <p class="mb-2"><strong>Endereço:</strong> Av. Principal, 1234, Sala 500, Centro Tecnológico, São Paulo - SP</p>
+                <p class="mb-2"><strong>Telefone:</strong> <a href="tel:+5511999998888" class="hover:text-blue-400">(11) 99999-8888</a> (WhatsApp disponível)</p>
+                <p class="mb-4"><strong>Email:</strong> <a href="mailto:contato@empresa-inc.com" class="hover:text-blue-400">contato@empresa-inc.com</a></p>
+                <h5 class="text-md font-semibold mb-2 text-white">Navegação</h5>
+                <ul class="space-y-1">
+                    <li><a href="#hero" class="hover:text-blue-400">Início</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-400">Sobre Nós</a></li>
+                    <li><a href="#recursos" class="hover:text-blue-400">Diferenciais</a></li>
+                    <li><a href="#depoimentos" class="hover:text-blue-400">Clientes</a></li>
+                    <li><a href="#CTA" class="hover:text-blue-400">Fale Conosco</a></li>
+                    <!-- Links para Política de Privacidade e Termos de Uso removidos -->
+                </ul>
+            </div>
+
+            <!-- Mapa (Placeholder) -->
+            <div>
+                
+                <!-- Incorporar mapa do Google Maps ou similar aqui -->
+                <div class="bg-gray-700 h-64 rounded flex items-center justify-center text-gray-500">
+                   
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.145838233025!2d-46.656819684476!3d-23.56343926768312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678886512345!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de localização da Empresa Inc.">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-8">
+            &copy; 2025 Empresa Inc. Todos os direitos reservados.
+        </div>
+    </footer>   
+    <!-- script mobile -->
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a'); // Seleciona todos os links dentro do menu
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('-translate-y-full'); // Animação de entrada/saída
+            mobileMenu.classList.toggle('translate-y-0');
+
+            // Alterna o ícone do botão (opcional)
+            if (!isExpanded) {
+                menuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`; // Ícone 'X'
+            } else {
+                menuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`; // Ícone 'Hamburguer'
+            }
+        });
+
+        // Fecha o menu mobile ao clicar em um link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuButton.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.add('-translate-y-full');
+                mobileMenu.classList.remove('translate-y-0');
+                menuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`; // Restaura ícone 'Hamburguer'
+            });
+        });
+
+        // Opcional: Fechar o menu se clicar fora dele (mais complexo, pode ser adicionado depois)
+
+    </script>
+
+</body>
+</html>
+
